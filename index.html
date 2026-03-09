@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ريان جولد - Ryan Gold</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow gold-glow"></div>
+        <div class="glow purple-glow"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bolt text-gold"></i>
+            <h1>ريان جولد <span>Ryan Gold</span></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="glass-card">
+            <h2>تحميل الفيديوهات بسهولة</h2>
+            <p>قم بلصق رابط الفيديو هنا وسنقوم بتحميله لك (يوتيوب، إنستقرام، تيك توك)</p>
+            
+            <form id="downloadForm" class="download-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-link input-icon"></i>
+                    <input type="url" id="videoUrl" placeholder="https://..." required>
+                </div>
+                
+                <button type="submit" id="downloadBtn" class="gold-btn">
+                    <span class="btn-text">تحميل الآن <i class="fa-solid fa-download"></i></span>
+                    <div class="loader hidden"></div>
+                </button>
+            </form>
+
+            <div class="supported-platforms">
+                <h3>المنصات المدعومة</h3>
+                <div class="platforms-icons">
+                    <i class="fa-brands fa-youtube platform-icon" title="يوتيوب"></i>
+                    <i class="fa-brands fa-instagram platform-icon" title="إنستقرام"></i>
+                    <i class="fa-brands fa-tiktok platform-icon" title="تيك توك"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>تابعني على سناب شات <i class="fa-brands fa-snapchat ghost-icon"></i></p>
+        <a href="https://snapchat.com/add/nb-58" target="_blank" class="snapchat-link" rel="noopener noreferrer">NB-58</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
