@@ -25,7 +25,7 @@ def download_video():
     
     # إعدادات yt-dlp لتخطي الحظر وتجنب أخطاء الصيغ
     ydl_opts = {
-        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        'format': 'best',
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, f'{file_id}_%(title)s.%(ext)s'),
         'merge_output_format': 'mp4',
         'noplaylist': True,
