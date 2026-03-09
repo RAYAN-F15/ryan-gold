@@ -23,9 +23,9 @@ def download_video():
     # Generate a unique filename prefix to avoid conflicts
     file_id = str(uuid.uuid4())
     
-    # إعدادات yt-dlp لتخطي الحظر
+    # إعدادات yt-dlp لتخطي الحظر وتجنب أخطاء الصيغ
     ydl_opts = {
-        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        'format': 'bestvideo+bestaudio/best',
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, f'{file_id}_%(title)s.%(ext)s'),
         'merge_output_format': 'mp4',
         'noplaylist': True,
