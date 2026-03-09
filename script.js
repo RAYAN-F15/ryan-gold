@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === قم بتغيير هذا الرابط إلى رابط Railway بعد رفع الباك إند ===
     // مثال: const BACKEND_URL = 'https://your-app-name.up.railway.app';
-    const BACKEND_URL = 'http://localhost:5000';
+    const BACKEND_URL = 'https://ryan-gold-production.up.railway.app';
     // ===============================================================
 
     form.addEventListener('submit', async (e) => {
