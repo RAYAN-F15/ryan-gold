@@ -25,18 +25,24 @@ def download_video():
     
     # إعدادات yt-dlp لتخطي الحظر وتجنب أخطاء الصيغ
     ydl_opts = {
-        'format': 'bestvideo+bestaudio/best',
+        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
         'outtmpl': os.path.join(DOWNLOAD_FOLDER, f'{file_id}_%(title)s.%(ext)s'),
         'merge_output_format': 'mp4',
         'noplaylist': True,
         'quiet': False,
-        'no_warnings': False,
+        'no_warnings': True,
         'extractor_args': {
-            'youtube': ['player_client=web,default', 'po_token=web+']
+            'youtube': ['player_client=android,web']
         },
         'http_headers': {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        }
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-us,en;q=0.5',
+            'Sec-Fetch-Mode': 'navigate',
+        },
+        'sleep_interval': 1,
+        'max_sleep_interval': 3,
+        # 'cookiesfrombrowser': ('chrome',), # Remove this if not running locally
     }
 
     try:
